@@ -2,7 +2,7 @@ import { Userdata } from '../../Constants';
 import Downarrow from './Image/Downarrow.svg';
 const Navbar = () => {
   return (
-    <div className=" w-screen   shadow-lg bg-white shadow-slate-200  items-center  flex justify-end h-[81px]  pr-11 ">
+    <div className=" w-full   shadow-lg bg-white shadow-slate-200  items-center  flex justify-end h-[81px]  pr-11 ">
       <div
         className="w-[38px] flex items-center justify-center bg-[#FFEFC7] border-[#FFC400] border-[1px] h-[38px] rounded-full
       "
