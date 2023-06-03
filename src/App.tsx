@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import Home from './Pages/Home';
+import Survey from './Pages/Survey';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/survey" element={<Survey />} />
       </Routes>
     </BrowserRouter>
   );
