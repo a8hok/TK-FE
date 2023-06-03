@@ -1,17 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Contact from './Pages/Contact';
-import About from './Pages/About';
-import Home from './Pages/Home';
 
+import Login from './Pages/Login/Login';
+import Resource from './Pages/Resource/Resource';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/resource" element={<Resource />} />
       </Routes>
     </BrowserRouter>
   );
