@@ -6,3 +6,4 @@ export const json = [
   { Image: Resources, Title: 'Resources' },
   { Image: Settings, Title: 'Settings' },
 ];
+export const Userdata = [{ UserName: 'Alex Daubert', Member: 'Team Member' }];

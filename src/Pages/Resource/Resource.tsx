@@ -3,7 +3,10 @@ import Navbar from '../../Components/Navbar/Navbar';
 const Resource = () => {
   return (
     <div className="flex bg-[#F3F6FA]">
-      <Sidebar />
+      <div className="w-fit">
+        {' '}
+        <Sidebar />
+      </div>
       <Navbar />
     </div>
   );
