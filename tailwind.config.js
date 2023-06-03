@@ -7,7 +7,7 @@ module.exports = {
         TK: {
           background: '#F3F6FA',
           default: '#131921',
-          text:'#34465D'
+          text: '#34465D',
         },
       },
     },
