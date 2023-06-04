@@ -1,5 +1,5 @@
 import ActionItems from '../ActionItems';
-import TodoIcon from '../../assets/todo.svg';
+import TodoIcon from '../Assets/todo.svg';
 function Todo() {
   return (
     <div className="bg-white rounded-xl shadow-lg items-center w-[50%]">

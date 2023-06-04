@@ -1,4 +1,4 @@
-import hat from '../../assets/graduation_hat.svg';
+import hat from '../Assets/graduation_hat.svg';
 import ProgressCard from './progressCard';
 const LinearProgressCard = () => {
   return (

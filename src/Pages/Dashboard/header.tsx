@@ -1,4 +1,4 @@
-import DashboardIcon from '../../assets/dashboard.svg';
+import DashboardIcon from '../../Components/Assets/dashboard.svg';
 
 function DashboardHeader() {
   return (

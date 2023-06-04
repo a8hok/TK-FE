@@ -1,4 +1,5 @@
-import up from '../../assets/solar_graph-up.svg';
+import { IoTrendingUpOutline } from 'react-icons/io5';
+
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -9,8 +10,11 @@ function ProgressBar() {
       <div className="w-full justify-center items-center">
         <p className="text-[18px] text-TK-text my-[3%] ">Survey Engagement</p>
         <strong className="text-[1.776em] my-[3%]">232</strong>
-        <div className="flex justify-start text-center my-[2%]">
-          <img src={up} alt="" className="mx-[1%]" />
+        <div className="flex gap-2 justify-start text-center my-[2%]">
+          <IoTrendingUpOutline
+            color="#2DAF52"
+            fontSize="1em"
+          ></IoTrendingUpOutline>
           <small className="text-[0.75em] text-TK-text">+12%</small>
         </div>
       </div>
