@@ -9,20 +9,43 @@ import LoginBanner from '../../Components/Login/LoginBanner';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const [EmailId, SetEmail] = useState('');
+  const [PassWord, SetPassword] = useState('');
   const Navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem('IsLogged')) {
+      const Email: any = localStorage.getItem('Email');
+      const password: any = localStorage.getItem('Password');
+      SetEmail(Email);
+      SetPassword(password);
+
+      Navigate('/');
+    }
+  }, []);
+
   const [LoginStatus, setStatus] = useState('');
+  const [SaveLogin, setLogin] = useState(false);
   const [ForgetPasswordaccess, setaccess] = useState(0);
   const HandelForgetPassword = () => {
     setaccess(1);
+  };
+  const handelRememberme = (e: any) => {
+    e.preventDefault();
+    const isRemindemeOn = e.target.checked;
+    setLogin(isRemindemeOn);
   };
   const HandelLogin = (event: any) => {
     event.preventDefault();
     const Email = event.target.elements[0].value;
     const Password = event.target.elements[1].value;
-    console.log(Email, Password);
+
+    console.log(Email, Password, SaveLogin);
     const LoginEmail = localStorage.getItem('Email');
     const LoginPassword = localStorage.getItem('Password');
     if (LoginEmail === Email && LoginPassword == Password) {
+      if (SaveLogin == true) {
+        localStorage.setItem('IsLogged', 'true');
+      }
       Navigate('/resource');
     }
     if (LoginEmail != Email) {
@@ -41,9 +64,7 @@ function Home() {
   const handelSeePassword = () => {
     setVisible(!isVisible);
   };
-  useEffect(() => {
-    console.log(LoginStatus);
-  }, [LoginStatus]);
+
   return (
     <div>
       <div className="flex  ">
@@ -73,6 +94,7 @@ function Home() {
                   ></img>
                   <input
                     required
+                    defaultValue={EmailId}
                     type="email"
                     placeholder="example123@gmail.com"
                     className="w-[350px] placeholder:text-[#34465D] pl-[43px] rounded-[5px] border-[1px] border-[#C2CFE0] border-solid h-[50px]"
@@ -88,6 +110,7 @@ function Home() {
                     alt="msg"
                   ></img>
                   <input
+                    defaultValue={PassWord}
                     required
                     placeholder="Enter password"
                     type={!isVisible ? 'password' : 'text'}
@@ -104,6 +127,7 @@ function Home() {
                 <div className=" flex w-[350px]  items-start justify-between pt-[25px]">
                   <div className="flex ">
                     <input
+                      onChange={handelRememberme}
                       className="w-5 h-5 border-[1px] border-[#C2CFE0] border-solid  rounded-[5px]"
                       type="checkbox"
                     />
