@@ -1,5 +1,10 @@
+import Loginfooter from '../../Components/Login/LoginFooter';
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Loginfooter />
+    </div>
+  );
 }
 
 export default Home;
