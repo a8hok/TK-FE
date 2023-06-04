@@ -5,8 +5,9 @@ module.exports = {
     extend: {
       colors: {
         TK: {
-          background: '#131921',
+          background: '#F3F6FA',
           default: '#131921',
+          text: '#34465D',
         },
       },
     },
