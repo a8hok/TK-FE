@@ -5,8 +5,8 @@ const ActionItems = () => {
       <img alt=" " src={Avatar} />
       <div className="ml-[2%]">
         <p className="m">You have a New Leader named Nicci Troiani</p>
-        <p className="border-2 w-fit p-[2%] rounded-md my-[3%]">
-          Take First Fit Survey
+        <p className="border-2 w-fit px-[2.5%] py-[1%] text-[14px] text-[#1A202C] rounded-md my-[3%]">
+          Take First Fit Survey.
         </p>
       </div>
     </div>

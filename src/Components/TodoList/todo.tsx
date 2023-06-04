@@ -16,6 +16,8 @@ function Todo() {
         <p className="text-[14px] text-[#006AFF] ">View All</p>
       </div>
       <ActionItems />
+      <ActionItems />
+      <ActionItems />
     </div>
   );
 }

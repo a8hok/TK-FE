@@ -6,10 +6,10 @@ import 'react-circular-progressbar/dist/styles.css';
 function ProgressBar() {
   const percentage = 66;
   return (
-    <div className="flex bg-white my-[3%] rounded-lg shadow-xl w-fit p-[1.5%]">
+    <div className="flex bg-white mr-[3%] my-[3%] rounded-lg shadow-xl w-fit p-[2%] ">
       <div className="w-full justify-center items-center">
-        <p className="text-[18px] text-TK-text my-[3%] ">Survey Engagement</p>
-        <strong className="text-[1.776em] my-[3%]">232</strong>
+        <p className="text-[18px] text-TK-text my-[2%] ">Survey Engagement</p>
+        <strong className="text-[1.776em] my-[3.5%]">232</strong>
         <div className="flex gap-2 justify-start text-center my-[2%]">
           <IoTrendingUpOutline
             color="#2DAF52"

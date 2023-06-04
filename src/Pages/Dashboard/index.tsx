@@ -15,7 +15,12 @@ function Dashboard() {
         <Notification />
         <div className="w-full p-[4%]">
           <DashboardHeader />
-          <ProgressBar />
+          <div className="flex">
+            <ProgressBar />
+            <ProgressBar />
+            <ProgressBar />
+          </div>
+
           <div className="flex">
             <Todo />
             <LinearProgressCard />
