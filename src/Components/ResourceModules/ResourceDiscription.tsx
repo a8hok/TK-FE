@@ -1,6 +1,8 @@
 import ResourceLogo from './Image/resource.svg';
 import { ResourcesData } from '../../Constants';
 import ResourceUpload from './ResourceUpload';
+import ResourceFiles from './ResourceFiles';
+
 const ResourceDiscription = () => {
   return (
     <div>
@@ -26,6 +28,7 @@ const ResourceDiscription = () => {
         ))}
       </div>
       <ResourceUpload />
+      <ResourceFiles />
     </div>
   );
 };
