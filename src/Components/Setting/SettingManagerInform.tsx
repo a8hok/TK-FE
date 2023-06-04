@@ -3,7 +3,7 @@ export default function SettingManagerInform() {
   return (
     <div>
       <div className="pl-[30px] pt-[40px]">
-        <h1 className="text-[#34465D] text-[26px] tracking-wide">
+        <h1 className="text-[#34465D] font-medium	 text-[26px] tracking-wide">
           Manager Information
         </h1>
         <div className="pt-[40px]  ">

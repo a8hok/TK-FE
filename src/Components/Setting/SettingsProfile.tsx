@@ -2,7 +2,7 @@ function SettingsProfile() {
   return (
     <div>
       <div className="flex  flex-col ml-[70px] mt-[40px]  ">
-        <h1 className="text-[#34465D] text-[26px] tracking-wide">
+        <h1 className="text-[#34465D] font-medium	 text-[26px] tracking-wide">
           Profile Information
         </h1>
         <div className="bg-[#f5f6f7] w-[450px] pl-[50px] mt-[40px] mb-[25px] rounded-lg  pt-[40px]">
@@ -34,7 +34,9 @@ function SettingsProfile() {
           ></input>
         </div>
         <div className="flex flex-row gap-[10px] mb-[30px]">
-          <h1 className="text-[#34465D]">If you find any discrepancy</h1>
+          <h1 className="text-[#34465D]  font-extralight	tracking-wide">
+            If you find any discrepancy
+          </h1>
           <a
             href="/survey"
             className="text-[#006AFF] underline underline-offset-4 decoration-[#006AFF] "
