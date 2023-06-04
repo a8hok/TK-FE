@@ -1,4 +1,4 @@
-import close from '../../assets/close.svg';
+import close from '../../Components/Assets/close.svg';
 function Notification() {
   return (
     <div className="flex bg-TK-text justify-around py-[1%] w-full">

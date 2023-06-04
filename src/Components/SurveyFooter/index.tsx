@@ -1,4 +1,4 @@
-import Logo from '../../Assets/PoweredBy.svg';
+import Logo from '../Assets/PoweredBy.svg';
 
 function SurveyFooter() {
   return (

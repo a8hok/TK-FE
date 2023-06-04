@@ -28,7 +28,6 @@ function Survey() {
         <SurveyRadioBar />
         <SurveyRadioBar />
         <SurveyRadioBar />
-
         <SurveyNavButton />
       </div>
       <SurveyFooter />

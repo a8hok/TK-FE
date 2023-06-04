@@ -1,4 +1,4 @@
-import Logo from '../../Assets/logoSmall.svg';
+import Logo from '../Assets/logoSmall.svg';
 import { CgNotes } from 'react-icons/cg';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 

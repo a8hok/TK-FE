@@ -1,6 +1,6 @@
 import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/Sidebar/Sidebar';
-import DashboardIcon from '../../assets/dashboard.svg';
+import DashboardIcon from '../../Components/Assets/dashboard.svg';
 import Notification from './notification';
 import ProgressBar from './progressComponent';
 import Todo from './todo';
