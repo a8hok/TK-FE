@@ -5,7 +5,7 @@ import Logo from '../../Components/Assets/surveyEndCricket.svg';
 
 function SurveyEnd() {
   return (
-    <div>
+    <div className="bg-survey-bg bg-no-repeat bg-cover min-h-[100vh]">
       <SurveyHeader />
       <ProgressBar />
       <div className="flex flex-col justify-center items-center mt-[175px]">
@@ -18,7 +18,7 @@ function SurveyEnd() {
           Dashboard. This includes one TalentWatch survey on each person you
           report to and one TalentWatch General Survey.
         </p>
-        <button className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px] mt-[45px]">
+        <button className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px]">
           Close this Window
         </button>
       </div>
