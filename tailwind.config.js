@@ -10,6 +10,9 @@ module.exports = {
           text: '#34465D',
         },
       },
+      backgroundImage: {
+        'survey-bg': "url('/src/Components/Assets/background.svg')",
+      },
     },
   },
   plugins: [],

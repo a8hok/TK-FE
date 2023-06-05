@@ -1,5 +1,4 @@
 import { IoTrendingUpOutline } from 'react-icons/io5';
-
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 

@@ -6,7 +6,9 @@ function DashboardHeader() {
       <div className="flex items-center w-full justify-between">
         <div className="flex items-center">
           <img src={DashboardIcon} alt="" />
-          <p className="text-[26px] text-[#34465D] mx-[5%]">Dashboard</p>
+          <p className="text-[26px] cursor-pointer text-[#34465D] mx-[5%]">
+            Dashboard
+          </p>
         </div>
         <p className="text-[16px] text-[#707683] tracking-wide">
           {new Date().getDate()}{' '}

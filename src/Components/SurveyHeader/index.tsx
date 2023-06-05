@@ -4,7 +4,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 function SurveyHeader() {
   return (
-    <div className="flex justify-between items-center h-[90px]">
+    <div className="flex justify-between items-center h-[90px] bg-white">
       <div className="flex items-center mt-[15px] ml-[60px]">
         <img src={Logo} alt="logo" />
         <div className="flex items-center ml-[95px]">

@@ -1,19 +1,18 @@
+import HelpHeader from '../../Components/Help/HelpHeader';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
-import SettingHeader from '../../Components/Setting/SettingHeader';
-import SettingMiddle from '../../Components/Setting/SettingMiddle';
-
-function Settings() {
+import HelpMiddle from '../../Components/Help/HelpMiddle';
+function Help() {
   return (
     <div className="flex">
       <Sidebar />
       <div className="w-full  bg-[#F3F6FA]">
         <Navbar />
-        <SettingHeader />
-        <SettingMiddle />
+        <HelpHeader />
+        <HelpMiddle />
       </div>
     </div>
   );
 }
 
-export default Settings;
+export default Help;

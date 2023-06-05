@@ -6,7 +6,7 @@ import InfoCard from '../../Components/InfoCard';
 
 function SurveyStart() {
   return (
-    <div>
+    <div className="bg-survey-bg bg-no-repeat bg-cover min-h-[100vh]">
       <SurveyHeader />
       <div className="flex flex-col items-center justify-center">
         <img

@@ -1,4 +1,4 @@
-import { Userdata } from '../../Constants';
+import { Logindata } from '../../Constants';
 import Downarrow from './Image/Downarrow.svg';
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
         A
       </div>
       <div className="pl-3">
-        {Userdata.map(obj => (
+        {Logindata.map(obj => (
           <div key={0}>
             {' '}
             <p className=" flex justify-center items-center font-medium text-[#192A3E] text-[14px]">
