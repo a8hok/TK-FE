@@ -7,14 +7,14 @@ import PasswordIcon from '../../Components/Login/Image/Hide.svg';
 import ForgetPassword from '../../Components/Login/ForgetPassword';
 import LoginBanner from '../../Components/Login/LoginBanner';
 import { useNavigate } from 'react-router-dom';
-// import { Userdata } from '../../Constants';
+import { Userdata } from '../../Constants';
 
 function Home() {
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
   const Navigate = useNavigate();
   useEffect(() => {
-    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
     console.log(ParsedData[0].results[0].email);

@@ -1,6 +1,7 @@
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
-import ResourceDiscription from '../../Components/ResourceModules/ResourceDiscription';
+import ResourceDescription from '../../Components/ResourceModules/ResourceDescription';
+
 const Resource = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const Resource = () => {
         </div>
         <div className=" w-screen">
           <Navbar />
-          <ResourceDiscription />
+          <ResourceDescription />
         </div>
       </div>
     </div>

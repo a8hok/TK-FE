@@ -1,5 +1,6 @@
 import Banner from '../Assets/Rectangle1.svg';
 import 'react-sweet-progress/lib/style.css';
+
 const ProgressCard = () => {
   return (
     <div className="w-[200px] m-[2%] h-fit bg-learningcenter relative border rounded-2xl">

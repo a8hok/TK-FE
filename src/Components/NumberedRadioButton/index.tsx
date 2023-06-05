@@ -16,7 +16,7 @@ function SurveyRadioBar() {
                   id={String(choice)}
                   className="peer hidden"
                 />
-                <label className="block cursor-pointer select-none rounded-full p-2 text-center peer-checked:bg-green-500 peer-checked:font-bold peer-checked:text-white border-black border-2">
+                <label className="blockpointer cursor- select-none rounded-full p-2 text-center peer-checked:bg-green-500 peer-checked:font-bold peer-checked:text-white border-black border-2">
                   {choice}
                 </label>
               </div>
