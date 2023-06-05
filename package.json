@@ -14,6 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@material/linear-progress": "^14.0.0",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
