@@ -11,8 +11,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "survey-bg":"url('/src/Components/Assets/background.svg')"
-      }
+        'survey-bg': "url('/src/Components/Assets/background.svg')",
+      },
     },
   },
   plugins: [],
