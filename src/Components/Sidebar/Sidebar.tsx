@@ -1,8 +1,11 @@
+//image import
 import Logo from './Images/FP_logo.svg';
-import { Json } from '../../Constants';
 import Help from './Images/Help.svg';
-import { TalentRequest } from './TalentRequest';
 import Powerdbylogo from './Images/Powered by.svg';
+//component imports
+import { TalentRequest } from './TalentRequest';
+//constant imports
+import { Json } from '../../Constants';
 
 const Sidebar = () => {
   return (

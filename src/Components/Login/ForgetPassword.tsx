@@ -1,8 +1,13 @@
+//package imports
 import { useState } from 'react';
+//image imports
 import Logo from './Image/Logo.svg';
-import ResetPassword from './ResetPassword';
 import MessageLogo from './Image/Message.svg';
+//component imports
+import ResetPassword from './ResetPassword';
+
 const ForgetPassword = () => {
+  //state declaration
   const [ForgetPasswordaccess, setaccess] = useState(0);
   const [LoginStatus, setStatus] = useState('');
 
@@ -12,7 +17,7 @@ const ForgetPassword = () => {
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
 
-    const Email = ParsedData[0].results[0].email;
+    const Email = ParsedData[0]?.results[0]?.email;
     if (LoginID == Email) {
       setaccess(1);
     } else {

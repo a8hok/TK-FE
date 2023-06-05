@@ -1,4 +1,6 @@
+//image import
 import RequestLogo from './Images/Layer_1.svg';
+
 export const TalentRequest = () => {
   return (
     <div className="flex flex-col border-[1px] h-[203px] w-[200px] p-5 rounded-[10px] mt-[197px] border-solid border-[#E0E0E0] items-start ">

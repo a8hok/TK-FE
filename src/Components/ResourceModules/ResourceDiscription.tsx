@@ -1,7 +1,10 @@
-import ResourceLogo from './Image/resource.svg';
-import { ResourcesData } from '../../Constants';
+//component imports
 import ResourceUpload from './ResourceUpload';
 import ResourceFiles from './ResourceFiles';
+//image imports
+import ResourceLogo from './Image/resource.svg';
+//constant imports
+import { ResourcesData } from '../../Constants';
 
 const ResourceDiscription = () => {
   return (
@@ -13,12 +16,11 @@ const ResourceDiscription = () => {
         </p>
       </div>
       <div className="flex gap-x-[32px]  pl-[63px] pt-12">
-        {ResourcesData.map(obj => (
+        {ResourcesData.map((obj, index) => (
           <div
             className="w-[190px] h-[99px] bg-white focus:border-2 focus:border-solid focus:outline-violet-800 shadow-xl shadow-gray-200 rounded-[15px] flex flex-col items-center justify-center"
-            key={0}
+            key={index}
           >
-            {' '}
             <div className="flex text-[31px] font-semibold ">
               <img src={obj.Image} alt="ResourceLogo"></img>
               <p className="pl-[11px]">{obj.TotalAvilable}</p>

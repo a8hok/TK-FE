@@ -1,74 +1,84 @@
+//Package imports
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+//component imports
 import Loginfooter from '../../Components/Login/LoginFooter';
+import ForgetPassword from '../../Components/Login/ForgetPassword';
+import LoginBanner from '../../Components/Login/LoginBanner';
+//image imports
 import Logo from '../../Components/Login/Image/Logo.svg';
 import MessageLogo from '../../Components/Login/Image/Message.svg';
 import LockLogo from '../../Components/Login/Image/Lock.svg';
 import PasswordIcon from '../../Components/Login/Image/Hide.svg';
-import ForgetPassword from '../../Components/Login/ForgetPassword';
-import LoginBanner from '../../Components/Login/LoginBanner';
-import { useNavigate } from 'react-router-dom';
-// import { Userdata } from '../../Constants';
+//Constant imports
+import { Userdata } from '../../Constants';
 
 function Home() {
+  //state declarations
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
-  const Navigate = useNavigate();
-  useEffect(() => {
-    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    const userdetails: any = localStorage.getItem('Userdetails');
-    const ParsedData = JSON.parse(userdetails);
-    console.log(ParsedData[0].results[0].email);
-    console.log(ParsedData[0].results[0].login.password);
-    if (localStorage.getItem('IsLogged') == 'true') {
-      const Email: any = ParsedData[0].results[0].email;
-      const password: any = ParsedData[0].results[0].login.password;
-      SetEmail(Email);
-      SetPassword(password);
-
-      Navigate('/');
-    }
-  }, []);
-
   const [LoginStatus, setStatus] = useState('');
   const [SaveLogin, setLogin] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   const [ForgetPasswordaccess, setaccess] = useState(0);
+  const Navigate = useNavigate();
+
+  useEffect(() => {
+    //to set details in localstorage
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    if (ParsedData[0]?.results[0]?.email == '') {
+      localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    }
+    // to set the default value to the inputs
+    if (localStorage.getItem('IsLogged') == 'true') {
+      const Email: any = ParsedData[0]?.results[0]?.email;
+      const password: any = ParsedData[0]?.results[0]?.login?.password;
+      SetEmail(Email);
+      SetPassword(password);
+    }
+  }, []);
+  //forget password component render function
   const HandelForgetPassword = () => {
     setaccess(1);
   };
+  //remember me function
   const handelRememberme = (e: any) => {
     e.preventDefault();
     const isRemindemeOn = e.target.checked;
     setLogin(isRemindemeOn);
   };
+  //Login validation
   const HandelLogin = (event: any) => {
     event.preventDefault();
+
     const Email = event.target.elements[0].value;
     const Password = event.target.elements[1].value;
 
-    console.log(Email, Password, SaveLogin);
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
-    const LoginEmail = ParsedData[0].results[0].email;
-    const LoginPassword = ParsedData[0].results[0].login.password;
+
+    const LoginEmail = ParsedData[0]?.results[0]?.email;
+    const LoginPassword = ParsedData[0]?.results[0]?.login?.password;
+
     if (LoginEmail === Email && LoginPassword == Password) {
       if (SaveLogin == true) {
         localStorage.setItem('IsLogged', 'true');
       }
       Navigate('/resource');
     }
+
     if (LoginEmail != Email) {
       setStatus('Invalid useremail');
     }
+
     if (LoginEmail == Email) {
       if (Password != LoginPassword) {
         setStatus('Invalid Password');
       }
     }
-
-    // localStorage.setItem('Email', Email);
-    // localStorage.setItem('Password', Password);
   };
-  const [isVisible, setVisible] = useState(false);
+  //see password function
   const handelSeePassword = () => {
     setVisible(!isVisible);
   };
