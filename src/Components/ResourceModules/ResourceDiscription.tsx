@@ -6,7 +6,7 @@ import ResourceLogo from './Image/resource.svg';
 //constant imports
 import { ResourcesData } from '../../Constants';
 
-const ResourceDiscription = () => {
+const ResourceDescription = () => {
   return (
     <div>
       <div className="flex h-8  items-center pt-11 pl-[63px]">
@@ -35,4 +35,4 @@ const ResourceDiscription = () => {
   );
 };
 
-export default ResourceDiscription;
+export default ResourceDescription;

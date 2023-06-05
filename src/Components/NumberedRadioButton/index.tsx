@@ -1,6 +1,6 @@
 function SurveyRadioBar() {
   return (
-    <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between">
+    <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between p-[20px] rounded-md">
       <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between">
         <p className="text-[16px] font-[400]">
           The {"organization's"} vision/mission/goals inspire me and help me be
@@ -16,7 +16,7 @@ function SurveyRadioBar() {
                   id={String(choice)}
                   className="peer hidden"
                 />
-                <label className="block cursor-pointer select-none rounded-full p-2 text-center peer-checked:bg-green-500 peer-checked:font-bold peer-checked:text-white border-black border-2">
+                <label className="blockpointer cursor- select-none rounded-full p-2 text-center peer-checked:bg-green-500 peer-checked:font-bold peer-checked:text-white border-black border-2">
                   {choice}
                 </label>
               </div>

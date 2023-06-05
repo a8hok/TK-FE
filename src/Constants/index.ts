@@ -8,9 +8,9 @@ import AudioLogo from '../Components/ResourceModules/Image/AudiosLogo.svg';
 import VideoLogo from '../Components/ResourceModules/Image/VideosLogo.svg';
 
 export const Json = [
-  { Image: Dashbord, Title: 'Dashboard' },
-  { Image: Resources, Title: 'Resources' },
-  { Image: Settings, Title: 'Settings' },
+  { Image: Dashbord, Title: 'Dashboard', src: '/dashboard' },
+  { Image: Resources, Title: 'Resources', src: '/resource' },
+  { Image: Settings, Title: 'Settings', src: '/settings' },
 ];
 export const Logindata = [{ UserName: 'Alex Daubert', Member: 'Team Member' }];
 export const ResourcesData = [

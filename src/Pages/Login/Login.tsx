@@ -17,11 +17,27 @@ function Home() {
   //state declarations
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
+  const Navigate = useNavigate();
+  useEffect(() => {
+    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    console.log(ParsedData[0].results[0].email);
+    console.log(ParsedData[0].results[0].login.password);
+    if (localStorage.getItem('IsLogged') == 'true') {
+      const Email: any = ParsedData[0].results[0].email;
+      const password: any = ParsedData[0].results[0].login.password;
+      SetEmail(Email);
+      SetPassword(password);
+
+      Navigate('/');
+    }
+  }, []);
+
   const [LoginStatus, setStatus] = useState('');
   const [SaveLogin, setLogin] = useState(false);
   const [isVisible, setVisible] = useState(false);
   const [ForgetPasswordaccess, setaccess] = useState(0);
-  const Navigate = useNavigate();
 
   useEffect(() => {
     //to set details in localstorage
@@ -85,7 +101,7 @@ function Home() {
 
   return (
     <div>
-      <div className="flex  ">
+      <div className="flex">
         <LoginBanner />
         {ForgetPasswordaccess == 1 ? (
           <ForgetPassword />
