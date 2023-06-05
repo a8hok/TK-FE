@@ -3,8 +3,23 @@ import uparrow from './Image/uparrow-icon.svg';
 import downarrow from './Image/downarrow-icon.svg';
 //constant imports
 import { ResourcesFiles } from '../../Constants';
+//package imports
+import * as React from 'react';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 const ResourceFiles = () => {
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    console.log(event);
+    setPage(value);
+  };
+  const pagecount = Math.ceil(ResourcesFiles.length / 5);
+  console.log(pagecount);
+  const indexOfLastPost = page * 5;
+  const indexOfFirstPost = indexOfLastPost - 5;
+  const data = ResourcesFiles.slice(indexOfFirstPost, indexOfLastPost);
+  console.log(data);
   return (
     <div className="text-[#34465D] text-[26px] font-medium pt-8 pl-[63px]">
       Files
@@ -38,7 +53,7 @@ const ResourceFiles = () => {
       </div>
       <div className="w-[90%] h-full rounded-b-[15px] shadow-xl shadow-gray-200 bg-[#C6D5FE] ">
         <div className="w-full h-full rounded-[15px]   bg-white">
-          {ResourcesFiles?.map((obj, index) => (
+          {data?.map((obj, index) => (
             <div key={index}>
               <div className="bg-black  ml-8 opacity-10 w-[90%] h-[0.5px]"></div>
               <div className="font-medium text-[14px] flex justify-between items-center">
@@ -59,6 +74,25 @@ const ResourceFiles = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="flex pt-[32px] w-[90%]  items-center justify-between pr-[61px]">
+        <Stack spacing={2}>
+          <Pagination
+            className=""
+            count={pagecount}
+            shape="rounded"
+            color="primary"
+            page={page}
+            boundaryCount={2}
+            siblingCount={1}
+            onChange={handleChange}
+          />
+        </Stack>
+        <div className="text-[#626262] w-[173px] h-[35px] bg-white rounded-[5px] flex  items-center justify-center text-[14px] font-semibold">
+          <p>
+            {indexOfLastPost} of {ResourcesFiles.length}{' '}
+          </p>
         </div>
       </div>
     </div>
