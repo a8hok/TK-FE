@@ -173,22 +173,6 @@ export const ResourcesFiles = [
     AccessType: 'View',
     DocType: DocsLogo,
   },
-  {
-    No: '02',
-    FileName: 'Company Policies',
-    UplodedDate: '22/7/2023',
-    Size: '100 KB',
-    AccessType: 'View',
-    DocType: DocsLogo,
-  },
-  {
-    No: '02',
-    FileName: 'Company Policies',
-    UplodedDate: '22/7/2023',
-    Size: '100 KB',
-    AccessType: 'View',
-    DocType: DocsLogo,
-  },
 ];
 export const Userdata = [
   {

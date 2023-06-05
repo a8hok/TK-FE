@@ -20,6 +20,12 @@ const ResourceFiles = () => {
   const indexOfFirstPost = indexOfLastPost - 5;
   const data = ResourcesFiles.slice(indexOfFirstPost, indexOfLastPost);
   console.log(data);
+  let lastPostIndex = indexOfLastPost;
+  if (indexOfLastPost > ResourcesFiles.length) {
+    lastPostIndex = ResourcesFiles.length;
+  } else {
+    lastPostIndex = indexOfLastPost;
+  }
   return (
     <div className="text-[#34465D] text-[26px] font-medium pt-8 pl-[63px]">
       Files
@@ -91,7 +97,7 @@ const ResourceFiles = () => {
         </Stack>
         <div className="text-[#626262] w-[173px] h-[35px] bg-white rounded-[5px] flex  items-center justify-center text-[14px] font-semibold">
           <p>
-            {indexOfLastPost} of {ResourcesFiles.length}{' '}
+            {lastPostIndex} of {ResourcesFiles.length}{' '}
           </p>
         </div>
       </div>
