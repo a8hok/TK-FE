@@ -9,12 +9,14 @@ const ForgetPassword = () => {
   const HandelLoginID = (event: any) => {
     event.preventDefault();
     const LoginID = event.target.elements[0].value;
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
 
-    const Email = localStorage.getItem('Email');
+    const Email = ParsedData[0].results[0].email;
     if (LoginID == Email) {
       setaccess(1);
     } else {
-      setStatus('Enter correct LoginID');
+      setStatus('Invalid LoginID');
     }
   };
   return (

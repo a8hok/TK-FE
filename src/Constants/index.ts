@@ -12,7 +12,7 @@ export const Json = [
   { Image: Resources, Title: 'Resources' },
   { Image: Settings, Title: 'Settings' },
 ];
-export const Userdata = [{ UserName: 'Alex Daubert', Member: 'Team Member' }];
+export const Logindata = [{ UserName: 'Alex Daubert', Member: 'Team Member' }];
 export const ResourcesData = [
   { Image: DocsLogo, ResourcesType: 'Docs', TotalAvilable: '12' },
   { Image: SheetsLogo, ResourcesType: 'Sheets', TotalAvilable: '34' },
@@ -60,5 +60,50 @@ export const ResourcesFiles = [
     Size: '100 KB',
     AccessType: 'View',
     DocType: VideoLogo,
+  },
+];
+export const Userdata = [
+  {
+    results: [
+      {
+        gender: 'male',
+        name: { title: 'Mr', first: 'Elio', last: 'Petit' },
+        location: {
+          street: { number: 5699, name: 'Rue de Cuire' },
+          city: 'Metz',
+          state: 'Var',
+          country: 'France',
+          postcode: 51298,
+          coordinates: { latitude: '-21.3013', longitude: '-70.5371' },
+          timezone: {
+            offset: '+1:00',
+            description: 'Brussels, Copenhagen, Madrid, Paris',
+          },
+        },
+        email: 'elio.petit@example.com',
+        login: {
+          uuid: '3c7977f7-a3f9-40af-bbc9-a895cb2f06e5',
+          username: 'smallmeercat678',
+          password: 'quest1',
+          salt: 'Nn7JbP7R',
+          md5: 'faa994044f469af04f9cd476e8fa2208',
+          sha1: '9b420eb674cb2c39c1fbcb4aebc9117611925ea4',
+          sha256:
+            'ff685adeb8fd9fb234eb00cd0b3c16364573a3c6fac3f115abb606f57694783c',
+        },
+        dob: { date: '1976-05-21T15:11:43.943Z', age: 47 },
+        registered: { date: '2014-01-20T10:14:43.532Z', age: 9 },
+        phone: '04-71-90-48-33',
+        cell: '06-07-65-01-11',
+        id: { name: 'INSEE', value: '1760440224620 92' },
+        picture: {
+          large: 'https://randomuser.me/api/portraits/men/35.jpg',
+          medium: 'https://randomuser.me/api/portraits/med/men/35.jpg',
+          thumbnail: 'https://randomuser.me/api/portraits/thumb/men/35.jpg',
+        },
+        nat: 'FR',
+      },
+    ],
+    info: { seed: '14f8040e788b942a', results: 1, page: 1, version: '1.4' },
   },
 ];

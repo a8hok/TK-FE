@@ -9,7 +9,11 @@ const ResetPassword = () => {
     Event.preventDefault();
     const Newpassword = Event.target.elements[0].value;
     const Confirmpassword = Event.target.elements[1].value;
-    const OldPassword = localStorage.getItem('Password');
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    console.log(ParsedData, '1');
+
+    const OldPassword = ParsedData[0].results[0].login.password;
     if (Newpassword == OldPassword) {
       console.log('hi');
       setStatus('please enter a new password');
@@ -19,7 +23,9 @@ const ResetPassword = () => {
     }
     if (Newpassword != OldPassword) {
       if (Newpassword == Confirmpassword) {
-        localStorage.setItem('Password', Newpassword);
+        ParsedData[0].results[0].login.password = Newpassword;
+        localStorage.setItem('Userdetails', JSON.stringify(ParsedData));
+        localStorage.setItem('IsLogged', 'false');
         reset(1);
       }
     }

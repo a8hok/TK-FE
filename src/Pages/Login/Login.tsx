@@ -7,15 +7,21 @@ import PasswordIcon from '../../Components/Login/Image/Hide.svg';
 import ForgetPassword from '../../Components/Login/ForgetPassword';
 import LoginBanner from '../../Components/Login/LoginBanner';
 import { useNavigate } from 'react-router-dom';
+// import { Userdata } from '../../Constants';
 
 function Home() {
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
   const Navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem('IsLogged')) {
-      const Email: any = localStorage.getItem('Email');
-      const password: any = localStorage.getItem('Password');
+    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    console.log(ParsedData[0].results[0].email);
+    console.log(ParsedData[0].results[0].login.password);
+    if (localStorage.getItem('IsLogged') == 'true') {
+      const Email: any = ParsedData[0].results[0].email;
+      const password: any = ParsedData[0].results[0].login.password;
       SetEmail(Email);
       SetPassword(password);
 
@@ -40,8 +46,10 @@ function Home() {
     const Password = event.target.elements[1].value;
 
     console.log(Email, Password, SaveLogin);
-    const LoginEmail = localStorage.getItem('Email');
-    const LoginPassword = localStorage.getItem('Password');
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    const LoginEmail = ParsedData[0].results[0].email;
+    const LoginPassword = ParsedData[0].results[0].login.password;
     if (LoginEmail === Email && LoginPassword == Password) {
       if (SaveLogin == true) {
         localStorage.setItem('IsLogged', 'true');
