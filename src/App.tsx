@@ -8,6 +8,7 @@ import Survey from './Pages/Survey';
 import Dashboard from './Pages/Dashboard';
 import SurveyStart from './Pages/SurveyStart';
 import SurveyEnd from './Pages/SurveyEnd';
+import DashboardActivity from './Pages/DashboardActivities/DashboardActivity';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ const App: React.FC = () => {
 
         <Route path="/survey" element={<Survey />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboardactivity" element={<DashboardActivity />} />
       </Routes>
     </BrowserRouter>
   );
