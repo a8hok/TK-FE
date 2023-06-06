@@ -40,7 +40,7 @@ const MyTalentDashboard = () => {
                 </div>
                 <div className="w-full mt-[5px] pr-[43px] pl-[33px] h-2">
                   <LinearProgress
-                    sx={{ width: '100%', height: '8px', borderRadius: '2px' }}
+                    sx={{ width: '277px', height: '8px', borderRadius: '2px' }}
                     variant="determinate"
                     value={70}
                   />
