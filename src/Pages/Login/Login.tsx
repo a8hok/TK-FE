@@ -25,20 +25,15 @@ function Home() {
 
   useEffect(() => {
     // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    const isRememberStatus = {
-      Status: true,
-      userEmail: 'alexander.campbell@example.com',
-    };
-    localStorage.setItem('IsLogged', JSON.stringify(isRememberStatus));
-    //to set details in localstorage
-    const userdetails: any = localStorage.getItem('Userdetails') || [];
-    const ParsedData = JSON.parse(userdetails);
-    const data = localStorage.getItem('IsLogged') || ' ';
-    const ParsedDatas = JSON.parse(data);
-    // console.log(ParsedDatas);
+    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
 
-    if (ParsedData) {
+    //to set details in localstorage
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    const data = localStorage.getItem('IsLogged') || 'false';
+    const ParsedDatas = JSON.parse(data);
+
+    if (ParsedData?.length) {
       if (ParsedDatas.Status == true) {
         const IsRememberUserDetails = ParsedData.find((obj: any) => {
           if (obj.email == ParsedDatas.userEmail) {
