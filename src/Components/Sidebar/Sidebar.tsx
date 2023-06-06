@@ -13,7 +13,7 @@ const Sidebar = () => {
         {Json.map((obj, index) => (
           <div
             key={index}
-            className="w-[200px] cursor-pointer flex text-justify h-12"
+            className="w-[200px] hover:bg-[#006AFF] hover:text-white cursor-pointer flex text-justify h-12"
           >
             <img className="mr-3 pl-[19px]" src={obj.Image} alt="img "></img>
             <Link to={obj.src}>
@@ -22,7 +22,7 @@ const Sidebar = () => {
           </div>
         ))}{' '}
         <div className="w-[183px] opacity-20 h-[0.5px] bg-black mt-[18px]"></div>
-        <div className="w-[200px] cursor-pointer flex text-justify h-12">
+        <div className="w-[200px] hover:bg-[#006AFF] hover:text-white cursor-pointer flex text-justify h-12">
           {' '}
           <img className="mr-3 pl-[19px]" src={Help} alt="help"></img>
           <Link to={'/help'}>

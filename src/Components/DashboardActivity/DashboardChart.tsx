@@ -1,9 +1,7 @@
-// import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { IoTrendingUpOutline } from 'react-icons/io5';
 
 const DashboardChart = () => {
-  // Sample data
   const data = [
     { name: 'LEI', x1: 32, y1: 68 },
     { name: 'OEI', x2: 22, y2: 76 },
@@ -22,8 +20,7 @@ const DashboardChart = () => {
           <CartesianGrid opacity={0} />
           <XAxis dataKey="name" />
           <YAxis type="number" domain={[0, 100]} />
-          {/* <Bar dataKey="x" stackId="a" fill="#8884d8" />
-      <Bar dataKey="y" stackId="a" fill="#82ca9d" /> */}
+
           <Bar
             dataKey="x1"
             stackId="a"

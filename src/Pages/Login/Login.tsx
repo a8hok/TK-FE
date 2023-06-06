@@ -1,81 +1,119 @@
+//Package imports
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+//component imports
 import Loginfooter from '../../Components/Login/LoginFooter';
+import ForgetPassword from '../../Components/Login/ForgetPassword';
+import LoginBanner from '../../Components/Login/LoginBanner';
+//image imports
 import Logo from '../../Components/Login/Image/Logo.svg';
 import MessageLogo from '../../Components/Login/Image/Message.svg';
 import LockLogo from '../../Components/Login/Image/Lock.svg';
 import PasswordIcon from '../../Components/Login/Image/Hide.svg';
-import ForgetPassword from '../../Components/Login/ForgetPassword';
-import LoginBanner from '../../Components/Login/LoginBanner';
-import { useNavigate } from 'react-router-dom';
+//Constant imports
 import { Userdata } from '../../Constants';
 
 function Home() {
+  //state declarations
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
   const Navigate = useNavigate();
-  useEffect(() => {
-    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    const userdetails: any = localStorage.getItem('Userdetails');
-    const ParsedData = JSON.parse(userdetails);
-    console.log(ParsedData[0].results[0].email);
-    console.log(ParsedData[0].results[0].login.password);
-    if (localStorage.getItem('IsLogged') == 'true') {
-      const Email: any = ParsedData[0].results[0].email;
-      const password: any = ParsedData[0].results[0].login.password;
-      SetEmail(Email);
-      SetPassword(password);
-
-      Navigate('/');
-    }
-  }, []);
-
   const [LoginStatus, setStatus] = useState('');
   const [SaveLogin, setLogin] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   const [ForgetPasswordaccess, setaccess] = useState(0);
+
+  useEffect(() => {
+    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    //to set details in localstorage
+    const userdetails: any = localStorage.getItem('Userdetails');
+    const ParsedData = JSON.parse(userdetails);
+    const data = localStorage.getItem('IsLogged') || ' ';
+    const ParsedDatas = JSON.parse(data);
+    // console.log(ParsedDatas);
+
+    if (ParsedData) {
+      if (ParsedDatas.Status == true) {
+        const IsRememberUserDetails = ParsedData.find((obj: any) => {
+          if (obj.email == ParsedDatas.userEmail) {
+            return obj;
+          }
+        });
+        const Email: any = IsRememberUserDetails?.email;
+        const password: any = IsRememberUserDetails?.login?.password;
+        SetEmail(Email);
+        SetPassword(password);
+      }
+    } else {
+      localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    }
+  }, []);
+  //forget password component render function
   const HandelForgetPassword = () => {
     setaccess(1);
   };
+  //remember me function
   const handelRememberme = (e: any) => {
     e.preventDefault();
     const isRemindemeOn = e.target.checked;
+    console.log(isRemindemeOn);
     setLogin(isRemindemeOn);
   };
+  //Login validation
   const HandelLogin = (event: any) => {
     event.preventDefault();
+
     const Email = event.target.elements[0].value;
     const Password = event.target.elements[1].value;
 
-    console.log(Email, Password, SaveLogin);
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
-    const LoginEmail = ParsedData[0].results[0].email;
-    const LoginPassword = ParsedData[0].results[0].login.password;
+    console.log(ParsedData);
+    const data = ParsedData.find((obj: any) => obj.email == Email);
+    console.log(data);
+    const LoginEmail = data?.email;
+    const LoginPassword = data?.login?.password;
+
     if (LoginEmail === Email && LoginPassword == Password) {
       if (SaveLogin == true) {
-        localStorage.setItem('IsLogged', 'true');
+        const isRememberStatus = {
+          Status: true,
+          userEmail: Email,
+        };
+        localStorage.setItem('IsLogged', JSON.stringify(isRememberStatus));
       }
-      Navigate('/resource');
+      switch (data.designation) {
+        case 'Leader':
+          {
+            Navigate('/talentdashboard');
+          }
+          break;
+        case 'Member':
+          {
+            Navigate('/resource');
+          }
+          break;
+      }
     }
+
     if (LoginEmail != Email) {
       setStatus('Invalid useremail');
     }
+
     if (LoginEmail == Email) {
       if (Password != LoginPassword) {
         setStatus('Invalid Password');
       }
     }
-
-    // localStorage.setItem('Email', Email);
-    // localStorage.setItem('Password', Password);
   };
-  const [isVisible, setVisible] = useState(false);
+  //see password function
   const handelSeePassword = () => {
     setVisible(!isVisible);
   };
 
   return (
     <div>
-      <div className="flex  ">
+      <div className="flex">
         <LoginBanner />
         {ForgetPasswordaccess == 1 ? (
           <ForgetPassword />

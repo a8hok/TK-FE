@@ -1,6 +1,8 @@
+//image imports
 import UploadIcon from './Image/Upload-icon.svg';
 import Fileicon from './Image/File-icon.svg';
 import Searchicon from './Image/Search-icon.svg';
+
 const ResourceUpload = () => {
   return (
     <div className="pt-12 flex  pl-[63px]">

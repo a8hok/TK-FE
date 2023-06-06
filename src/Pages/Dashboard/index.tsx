@@ -8,7 +8,7 @@ import LinearProgressCard from '../../Components/Linear_ProgressCard';
 
 function Dashboard() {
   return (
-    <div className="flex bg-[#F3F6FA]">
+    <div className="flex bg-[#F3F6FA] fixed w-full">
       <Sidebar />
       <div className="w-full">
         <Navbar />
@@ -20,7 +20,6 @@ function Dashboard() {
             <ProgressBar />
             <ProgressBar />
           </div>
-
           <div className="flex">
             <Todo />
             <LinearProgressCard />

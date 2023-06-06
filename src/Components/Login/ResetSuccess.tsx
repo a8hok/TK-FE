@@ -1,4 +1,6 @@
+//image import
 import Logo from './Image/Logo.svg';
+
 const ResetSuccess = () => {
   return (
     <div>
