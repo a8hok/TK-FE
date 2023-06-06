@@ -97,12 +97,12 @@ function Home() {
     }
 
     if (LoginEmail != Email) {
-      setStatus('Invalid useremail');
+      setStatus('Invalid Credentials');
     }
 
     if (LoginEmail == Email) {
       if (Password != LoginPassword) {
-        setStatus('Invalid Password');
+        setStatus('Invalid Credentials');
       }
     }
   };
