@@ -43,12 +43,14 @@ export default function HelpSubmitBox() {
         <div className="pt-[40px]">
           <h1>Details</h1>
           <div className="pt-[30px]">
-            <input
-              className="flex justify-start   w-[880px] h-[180px] bg-[#FFFFFF] border-[#C2CFE0] border-[1px]  rounded-[10px]  border-solid pr-[15px] pl-[15px]  "
-              type="text"
+            <textarea
+              className="flex justify-start   w-[880px] h-[180px] bg-[#FFFFFF] border-[#C2CFE0] border-[1px]  rounded-[10px]  border-solid pr-[15px] pl-[15px] placeholder:pt-[45px] pl-[40px] "
+              rows={4}
+              cols={70}
               placeholder="I am writing to request a change in my last name, as it appears to be incorrect under my profile section. Please update it to [Douglas]. I have attach the screenshot for your reference. 
-            Thank you."
-            />
+
+              Thankyou"
+            ></textarea>
           </div>
         </div>
       </div>

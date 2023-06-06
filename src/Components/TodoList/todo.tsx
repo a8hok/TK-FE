@@ -1,5 +1,6 @@
 import ActionItems from '../ActionItems';
 import TodoIcon from '../Assets/todo.svg';
+
 function Todo() {
   return (
     <div className="bg-white rounded-xl shadow-lg items-center w-[50%]">
@@ -15,9 +16,11 @@ function Todo() {
         </div>
         <p className="text-[14px] text-[#006AFF] ">View All</p>
       </div>
-      <ActionItems />
-      <ActionItems />
-      <ActionItems />
+      <div className="overflow-y-auto">
+        <ActionItems />
+        <ActionItems />
+        <ActionItems />
+      </div>
     </div>
   );
 }

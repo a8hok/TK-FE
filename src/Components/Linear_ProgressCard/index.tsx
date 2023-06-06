@@ -2,7 +2,7 @@ import hat from '../Assets/graduation_hat.svg';
 import ProgressCard from './progressCard';
 const LinearProgressCard = () => {
   return (
-    <div className="bg-white rounded-xl shadow-lg items-center w-[50%] m-[2%] ">
+    <div className="bg-white rounded-xl shadow-lg items-center w-[50%] mx-[1%] ">
       <div className=" flex justify-between items-center w-full p-[3%] border-b-[1.5px]">
         <div className="flex items-center w-full">
           <img src={hat} alt="" />
