@@ -1,7 +1,7 @@
 //component imports
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
-import ResourceDescription from '../../Components/ResourceModules/ResourceDiscription';
+import ResourceDescription from '../../Components/ResourceModules/ResourceDescription';
 
 const Resource = () => {
   return (
