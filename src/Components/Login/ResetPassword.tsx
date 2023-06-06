@@ -5,11 +5,11 @@ import ResetSuccess from './ResetSuccess';
 //image imports
 import Logo from './Image/Logo.svg';
 
-const ResetPassword = () => {
+const ResetPassword = (props: any) => {
   //state declaration
   const [resetStatus, setStatus] = useState('');
   const [resetchange, reset] = useState(0);
-
+  console.log(props.email);
   const HandelResetpassword = (Event: any) => {
     Event.preventDefault();
     const Newpassword = Event.target.elements[0].value;
@@ -18,7 +18,7 @@ const ResetPassword = () => {
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
 
-    const OldPassword = ParsedData[0]?.results[0]?.login?.password;
+    const OldPassword = ParsedData?.login?.password;
     //password validation and reset
     if (Newpassword === OldPassword) {
       setStatus('Enter a new password');
@@ -28,8 +28,15 @@ const ResetPassword = () => {
     }
     if (Newpassword != OldPassword) {
       if (Newpassword === Confirmpassword) {
-        ParsedData[0].results[0].login.password = Newpassword;
-        localStorage.setItem('Userdetails', JSON.stringify(ParsedData));
+        const ModifiedData = ParsedData.map((obj: any) => {
+          if (obj.email == props.email) {
+            console.log(obj);
+            obj.login.password = Newpassword;
+          }
+          return obj;
+        });
+        console.log(ModifiedData);
+        localStorage.setItem('Userdetails', JSON.stringify(ModifiedData));
         localStorage.setItem('IsLogged', 'false');
         reset(1);
       }

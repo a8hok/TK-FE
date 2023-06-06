@@ -10,16 +10,23 @@ const ForgetPassword = () => {
   //state declaration
   const [ForgetPasswordaccess, setaccess] = useState(0);
   const [LoginStatus, setStatus] = useState('');
-
+  const [loginID, setLoginId] = useState('');
   const HandelLoginID = (event: any) => {
     event.preventDefault();
     const LoginID = event.target.elements[0].value;
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
 
-    const Email = ParsedData[0]?.results[0]?.email;
+    const data = ParsedData.find((obj: any) => {
+      if (obj.email == LoginID) {
+        return obj;
+      }
+    });
+    const Email = data?.email;
+
     if (LoginID == Email) {
       setaccess(1);
+      setLoginId(Email);
     } else {
       setStatus('Invalid LoginID');
     }
@@ -28,7 +35,7 @@ const ForgetPassword = () => {
     <div className="flex ">
       <div>
         {ForgetPasswordaccess == 1 ? (
-          <ResetPassword />
+          <ResetPassword email={loginID} />
         ) : (
           <div className="flex flex-col items-center    min-w-[566px] w-[566px] ">
             <img className="pt-[77px]" src={Logo} alt="Logo-login"></img>

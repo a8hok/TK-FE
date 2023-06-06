@@ -22,6 +22,15 @@ module.exports = {
     "no-unused-vars": "error",
     "indent": ["error", 2],
     "react/react-in-jsx-scope": "off",
+    indent: [
+      'error',
+      2,
+      {
+        SwitchCase: 1,
+        ignoredNodes: ['ConditionalExpression'], 
+      },
+    ],
+   
   },
   settings: {
     react: {

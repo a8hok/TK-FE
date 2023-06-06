@@ -18,40 +18,34 @@ function Home() {
   const [EmailId, SetEmail] = useState('');
   const [PassWord, SetPassword] = useState('');
   const Navigate = useNavigate();
-  useEffect(() => {
-    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    const userdetails: any = localStorage.getItem('Userdetails');
-    const ParsedData = JSON.parse(userdetails);
-    console.log(ParsedData[0].results[0].email);
-    console.log(ParsedData[0].results[0].login.password);
-    if (localStorage.getItem('IsLogged') == 'true') {
-      const Email: any = ParsedData[0].results[0].email;
-      const password: any = ParsedData[0].results[0].login.password;
-      SetEmail(Email);
-      SetPassword(password);
-
-      Navigate('/');
-    }
-  }, []);
-
   const [LoginStatus, setStatus] = useState('');
   const [SaveLogin, setLogin] = useState(false);
   const [isVisible, setVisible] = useState(false);
   const [ForgetPasswordaccess, setaccess] = useState(0);
 
   useEffect(() => {
+    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
     //to set details in localstorage
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
-    if (ParsedData[0]?.results[0]?.email == '') {
+    const data = localStorage.getItem('IsLogged') || ' ';
+    const ParsedDatas = JSON.parse(data);
+    // console.log(ParsedDatas);
+
+    if (ParsedData) {
+      if (ParsedDatas.Status == true) {
+        const IsRememberUserDetails = ParsedData.find((obj: any) => {
+          if (obj.email == ParsedDatas.userEmail) {
+            return obj;
+          }
+        });
+        const Email: any = IsRememberUserDetails?.email;
+        const password: any = IsRememberUserDetails?.login?.password;
+        SetEmail(Email);
+        SetPassword(password);
+      }
+    } else {
       localStorage.setItem('Userdetails', JSON.stringify(Userdata));
-    }
-    // to set the default value to the inputs
-    if (localStorage.getItem('IsLogged') == 'true') {
-      const Email: any = ParsedData[0]?.results[0]?.email;
-      const password: any = ParsedData[0]?.results[0]?.login?.password;
-      SetEmail(Email);
-      SetPassword(password);
     }
   }, []);
   //forget password component render function
@@ -62,6 +56,7 @@ function Home() {
   const handelRememberme = (e: any) => {
     e.preventDefault();
     const isRemindemeOn = e.target.checked;
+    console.log(isRemindemeOn);
     setLogin(isRemindemeOn);
   };
   //Login validation
@@ -73,15 +68,32 @@ function Home() {
 
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
-
-    const LoginEmail = ParsedData[0]?.results[0]?.email;
-    const LoginPassword = ParsedData[0]?.results[0]?.login?.password;
+    console.log(ParsedData);
+    const data = ParsedData.find((obj: any) => obj.email == Email);
+    console.log(data);
+    const LoginEmail = data?.email;
+    const LoginPassword = data?.login?.password;
 
     if (LoginEmail === Email && LoginPassword == Password) {
       if (SaveLogin == true) {
-        localStorage.setItem('IsLogged', 'true');
+        const isRememberStatus = {
+          Status: true,
+          userEmail: Email,
+        };
+        localStorage.setItem('IsLogged', JSON.stringify(isRememberStatus));
       }
-      Navigate('/resource');
+      switch (data.designation) {
+        case 'Leader':
+          {
+            Navigate('/talentdashboard');
+          }
+          break;
+        case 'Member':
+          {
+            Navigate('/resource');
+          }
+          break;
+      }
     }
 
     if (LoginEmail != Email) {
