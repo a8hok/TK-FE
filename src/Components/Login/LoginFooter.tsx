@@ -1,4 +1,6 @@
+//image import
 import Logo from '../Assets/PoweredBy.svg';
+
 const Loginfooter = () => {
   return (
     <div className="flex  w-screen h-[101px] items-center justify-between">
