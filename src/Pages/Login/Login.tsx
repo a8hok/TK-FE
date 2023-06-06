@@ -25,14 +25,15 @@ function Home() {
 
   useEffect(() => {
     // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+
     //to set details in localstorage
     const userdetails: any = localStorage.getItem('Userdetails');
     const ParsedData = JSON.parse(userdetails);
-    const data = localStorage.getItem('IsLogged') || ' ';
+    const data = localStorage.getItem('IsLogged') || 'false';
     const ParsedDatas = JSON.parse(data);
-    // console.log(ParsedDatas);
 
-    if (ParsedData) {
+    if (ParsedData?.length) {
       if (ParsedDatas.Status == true) {
         const IsRememberUserDetails = ParsedData.find((obj: any) => {
           if (obj.email == ParsedDatas.userEmail) {
