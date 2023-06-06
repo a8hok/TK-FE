@@ -25,8 +25,14 @@ function Home() {
 
   useEffect(() => {
     // localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    localStorage.setItem('Userdetails', JSON.stringify(Userdata));
+    const isRememberStatus = {
+      Status: true,
+      userEmail: 'alexander.campbell@example.com',
+    };
+    localStorage.setItem('IsLogged', JSON.stringify(isRememberStatus));
     //to set details in localstorage
-    const userdetails: any = localStorage.getItem('Userdetails');
+    const userdetails: any = localStorage.getItem('Userdetails') || [];
     const ParsedData = JSON.parse(userdetails);
     const data = localStorage.getItem('IsLogged') || ' ';
     const ParsedDatas = JSON.parse(data);
