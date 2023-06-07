@@ -7,6 +7,7 @@ import Survey from './Pages/Survey';
 import Dashboard from './Pages/Dashboard';
 import SurveyStart from './Pages/SurveyStart';
 import SurveyEnd from './Pages/SurveyEnd';
+import DashboardActivity from './Pages/DashboardActivities/DashboardActivity';
 import TalentDashboard from './Pages/TalentDashboard/TalentDashboard';
 
 const App: React.FC = () => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route path="/talentdashboard" element={<TalentDashboard />}></Route>
         <Route path="/survey" element={<Survey />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboardactivity" element={<DashboardActivity />} />
       </Routes>
     </BrowserRouter>
   );
