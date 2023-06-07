@@ -7,7 +7,7 @@ function SurveyEnd() {
   return (
     <div className="bg-survey-bg bg-no-repeat bg-cover min-h-[100vh]">
       <SurveyHeader />
-      <ProgressBar />
+      <ProgressBar currentProgress={100} />
       <div className="flex flex-col justify-center items-center mt-[175px]">
         <img src={Logo} alt="logo" className="w-[100px] h-[100px]" />
         <p className="text-[24px] font-[500] mt-[65px]">
