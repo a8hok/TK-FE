@@ -1,0 +1,152 @@
+{"name":"PartingWords Survey",
+  "time": "8-10",
+  "sections": 2,
+  "totalQuestions": 14,
+  
+  "questions": [
+    [
+      {
+        "type": 1,
+        "instructions": "It is very important that you be completely honest in answering these questions. Your answers will help the organization provide the best work situation possible and address any concerns you had as an employee.",
+        "question": "Where are you Going?",
+        "description": "Please tell us if you are leaving the organization or transferring to another area within the organization.",
+        "options": [
+          "I am leaving the organization.",
+          "I am transferring to another area within the organization."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 3,
+        "question": "Would you recommend us, or consider rejoining?",
+        "options": [
+          "Would you recommend the organization as a good place to work?",
+          "Could the organization have done anything to keep you from leaving?",
+          "If the organization were willing to address the main reason you are leaving, would you consider rejoining the organization?"
+        ],
+        "summaryQuestion": "The main reason I decided to leave was:"
+      },
+      {
+        "type": 1,
+        "instructions": "It is very important that you be completely honest in answering these questions. Your answers will help the organization provide the best work situation possible and address any concerns you had as an employee.",
+        "question": "Where are you Going?",
+        "description": "Please tell us if you are leaving the organization or transferring to another area within the organization.",
+        "options": [
+          "I am leaving the organization.",
+          "I am transferring to another area within the organization."
+        ]
+      },
+      {
+        "type": 3,
+        "question": "Would you recommend us, or consider rejoining?",
+        "options": [
+          "Would you recommend the organization as a good place to work?",
+          "Could the organization have done anything to keep you from leaving?",
+          "If the organization were willing to address the main reason you are leaving, would you consider rejoining the organization?"
+        ],
+        "summaryQuestion": "The main reason I decided to leave was:"
+      }
+    ],
+    [
+      {
+        "type": 1,
+        "instructions": "It is very important that you be completely honest in answering these questions. Your answers will help the organization provide the best work situation possible and address any concerns you had as an employee.",
+        "question": "Where are you Going?",
+        "description": "Please tell us if you are leaving the organization or transferring to another area within the organization.",
+        "options": [
+          "I am leaving the organization.",
+          "I am transferring to another area within the organization."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 2,
+        "question": "Why are you leaving?",
+        "description": "Use the following scale to rate how much influence each item had on your decision to leave:",
+        "options": [
+          "My manager's ability to communicate effectively.",
+          "My manager's ability to coach and motivate me.",
+          "My manager's ability to meet commitments and hold others appropriately accountable."
+        ]
+      },
+      {
+        "type": 3,
+        "question": "Would you recommend us, or consider rejoining?",
+        "options": [
+          "Would you recommend the organization as a good place to work?",
+          "Could the organization have done anything to keep you from leaving?",
+          "If the organization were willing to address the main reason you are leaving, would you consider rejoining the organization?"
+        ],
+        "summaryQuestion": "The main reason I decided to leave was:"
+      },
+      {
+        "type": 1,
+        "instructions": "It is very important that you be completely honest in answering these questions. Your answers will help the organization provide the best work situation possible and address any concerns you had as an employee.",
+        "question": "Where are you Going?",
+        "description": "Please tell us if you are leaving the organization or transferring to another area within the organization.",
+        "options": [
+          "I am leaving the organization.",
+          "I am transferring to another area within the organization."
+        ]
+      },
+      {
+        "type": 3,
+        "question": "Would you recommend us, or consider rejoining?",
+        "options": [
+          "Would you recommend the organization as a good place to work?",
+          "Could the organization have done anything to keep you from leaving?",
+          "If the organization were willing to address the main reason you are leaving, would you consider rejoining the organization?"
+        ],
+        "summaryQuestion": "The main reason I decided to leave was:"
+      }
+    ]
+  ]
+}

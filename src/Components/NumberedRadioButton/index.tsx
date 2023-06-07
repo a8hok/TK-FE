@@ -1,4 +1,8 @@
-function SurveyRadioBar() {
+interface QuestionData {
+  questionProp: string;
+}
+function SurveyRadioBar(props: QuestionData) {
+  console.log(props);
   return (
     <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between p-[20px] rounded-md">
       <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between">
