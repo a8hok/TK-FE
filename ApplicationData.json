@@ -1,9 +1,10 @@
-{"name":"PartingWords Survey",
+{
+  "name": "PartingWords Survey",
   "time": "8-10",
   "sections": 2,
   "totalQuestions": 14,
-  
-  "questions": [
+
+  "questions": 
     [
       {
         "type": 1,
@@ -74,9 +75,7 @@
           "If the organization were willing to address the main reason you are leaving, would you consider rejoining the organization?"
         ],
         "summaryQuestion": "The main reason I decided to leave was:"
-      }
-    ],
-    [
+      },
       {
         "type": 1,
         "instructions": "It is very important that you be completely honest in answering these questions. Your answers will help the organization provide the best work situation possible and address any concerns you had as an employee.",
@@ -148,5 +147,5 @@
         "summaryQuestion": "The main reason I decided to leave was:"
       }
     ]
-  ]
+  
 }
