@@ -2,12 +2,14 @@ import ProgressBar from '../../Components/ProgressBar';
 import SurveyFooter from '../../Components/SurveyFooter';
 import SurveyHeader from '../../Components/SurveyHeader';
 import Logo from '../../Components/Assets/surveyEndCricket.svg';
+import { useNavigate } from 'react-router-dom';
 
 function SurveyEnd() {
+  const navigate = useNavigate();
   return (
     <div className="bg-survey-bg bg-no-repeat bg-cover min-h-[100vh]">
       <SurveyHeader />
-      <ProgressBar />
+      <ProgressBar currentProgress={100} />
       <div className="flex flex-col justify-center items-center mt-[175px]">
         <img src={Logo} alt="logo" className="w-[100px] h-[100px]" />
         <p className="text-[24px] font-[500] mt-[65px]">
@@ -18,7 +20,12 @@ function SurveyEnd() {
           Dashboard. This includes one TalentWatch survey on each person you
           report to and one TalentWatch General Survey.
         </p>
-        <button className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px]">
+        <button
+          className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px]"
+          onClick={() => {
+            navigate('/dashboard');
+          }}
+        >
           Close this Window
         </button>
       </div>

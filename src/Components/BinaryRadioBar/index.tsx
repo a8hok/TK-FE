@@ -1,4 +1,9 @@
-function BinaryRadioBar() {
+interface Question {
+  questionProp: string;
+}
+
+function BinaryRadioBar(props: Question) {
+  console.log(props);
   return (
     <div className="flex items-center w-[40vw] h-[60px] bg-white my-[26px] justify-between p-[20px] rounded-md">
       <div>Would you recommend the organization as a good place to work?</div>

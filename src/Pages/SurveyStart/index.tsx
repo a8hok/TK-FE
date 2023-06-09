@@ -3,8 +3,11 @@ import SurveyFooter from '../../Components/SurveyFooter';
 import Logo from '../../Components/Assets/surveyCricket.svg';
 import { BsQuestionSquare } from 'react-icons/bs';
 import InfoCard from '../../Components/InfoCard';
+import { useNavigate } from 'react-router-dom';
+import ApplicationData from '../../../ApplicationData.json';
 
 function SurveyStart() {
+  const navigate = useNavigate();
   return (
     <div className="bg-survey-bg bg-no-repeat bg-cover min-h-[100vh]">
       <SurveyHeader />
@@ -27,11 +30,24 @@ function SurveyStart() {
           <p className="ml-[15px]">Know more about this survey</p>
         </div>
         <div className="flex">
-          <InfoCard />
-          <InfoCard />
+          <InfoCard data={{ type: true, time: ApplicationData.time }} />
+          <InfoCard
+            data={{
+              type: false,
+              section: ApplicationData.sections,
+              question: ApplicationData.totalQuestions,
+            }}
+          />
         </div>
 
-        <button className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px]">
+        <button
+          className="rounded-md text-white bg-[#F68C2B] w-[285px] h-[50px] mt-[58px]"
+          onClick={() => {
+            localStorage.setItem('question', '0');
+
+            navigate('/survey');
+          }}
+        >
           Let&apos;s start
         </button>
       </div>

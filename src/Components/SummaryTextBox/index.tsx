@@ -1,4 +1,8 @@
-function SummaryTextBox() {
+interface Question {
+  questionProp: string;
+}
+function SummaryTextBox(props: Question) {
+  console.log(props);
   return (
     <div>
       <p className="block  text-[16px] font-[400] text-gray-900 dark:text-white my-[25px]">
