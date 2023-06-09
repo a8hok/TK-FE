@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import Login from './Pages/Login/Login';
 import Resource from './Pages/Resource/Resource';
 import Settings from './Pages/Settings';
@@ -8,6 +7,9 @@ import Survey from './Pages/Survey';
 import Dashboard from './Pages/Dashboard';
 import SurveyStart from './Pages/SurveyStart';
 import SurveyEnd from './Pages/SurveyEnd';
+import DashboardActivity from './Pages/DashboardActivities/DashboardActivity';
+import TalentDashboard from './Pages/TalentDashboard/TalentDashboard';
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -18,9 +20,10 @@ const App: React.FC = () => {
         <Route path="/help" element={<Help />} />
         <Route path="/start" element={<SurveyStart />} />
         <Route path="/end" element={<SurveyEnd />} />
-
+        <Route path="/talentdashboard" element={<TalentDashboard />}></Route>
         <Route path="/survey" element={<Survey />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboardactivity" element={<DashboardActivity />} />
       </Routes>
     </BrowserRouter>
   );

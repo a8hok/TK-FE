@@ -1,3 +1,4 @@
+//image import
 import Background from './Image/LoginBackground.svg';
 
 const LoginBanner = () => {
