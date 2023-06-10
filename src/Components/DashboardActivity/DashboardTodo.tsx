@@ -1,5 +1,5 @@
 import TodoIcon from '../Assets/todo.svg';
-import DashboardAction from './DashboardAction';
+import DashboardTodoAction from './DashboardTodoAction';
 export default function DashboardTodo() {
   return (
     <div>
@@ -17,7 +17,7 @@ export default function DashboardTodo() {
           <p className="text-[14px] text-[#006AFF] ">View All</p>
         </div>
         <div className="overflow-y-auto w-[480px] pt-[10px] pl-[20px]">
-          <DashboardAction />
+          <DashboardTodoAction />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import DashboardMerge from '../../Components/DashboardActivity/DashboardMerge';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
-function Help() {
+function DashboardActivity() {
   return (
     <div className="flex">
       <Sidebar />
@@ -13,4 +13,4 @@ function Help() {
   );
 }
 
-export default Help;
+export default DashboardActivity;

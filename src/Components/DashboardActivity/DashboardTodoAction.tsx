@@ -4,7 +4,7 @@ import Doc from './Image/doc.svg';
 import Xls from './Image/xls.svg';
 import Pdf from './Image/pdf.svg';
 
-export default function DashboardAction() {
+export default function DashboardTodoAction() {
   return (
     <div>
       <div className="flex border-t-2 border-[#E8E8E8] items-start p-[1.5%] m-[2%] h-[90px]  w-[400px] p-[1.5%]">
