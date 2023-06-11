@@ -4,7 +4,7 @@ import { BsChevronDown } from 'react-icons/bs';
 import { TbQuestionMark } from 'react-icons/tb';
 import DashboardChart from './DashboardChart';
 
-function DashboardMiddle() {
+function DashboardSurvey() {
   const percentage = 74;
   return (
     <div className="flex pl-[50px]">
@@ -64,4 +64,4 @@ function DashboardMiddle() {
   );
 }
 
-export default DashboardMiddle;
+export default DashboardSurvey;

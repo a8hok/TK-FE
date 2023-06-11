@@ -145,7 +145,7 @@ const DashboardChart = () => {
         </div>
       </div>
 
-      <a className="text-[#006AFF] pl-[41%] pt-[8%] absolute " href="dashboard">
+      <a className="text-[#006AFF] pl-[41%] pt-[8%] absolute " href="/reports">
         {' '}
         View Detail
       </a>
