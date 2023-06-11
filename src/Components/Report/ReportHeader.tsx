@@ -6,7 +6,7 @@ export default function ReportHeader() {
       <div className="flex items-center w-full">
         <div className="flex items-center pl-[50px] pt-[50px]">
           <img src={Report} alt="" />
-          <p className="text-[26px] cursor-pointer text-[#34465D] mx-[5%]">
+          <p className="text-[26px] cursor-pointer text-[#34465D] tracking-wide	 mx-[5%]">
             Reports
           </p>
         </div>

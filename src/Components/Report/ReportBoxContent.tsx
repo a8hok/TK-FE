@@ -22,7 +22,9 @@ export default function ReportBoxContent() {
             </p>
           </div>
           <div className="pl-[5%] c">
-            <CgMoreVerticalR />
+            <a href="participationreport">
+              <CgMoreVerticalR />
+            </a>
           </div>
         </div>
       </div>

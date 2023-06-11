@@ -10,6 +10,7 @@ import SurveyEnd from './Pages/SurveyEnd';
 import DashboardActivity from './Pages/DashboardActivities/DashboardActivity';
 import TalentDashboard from './Pages/TalentDashboard/TalentDashboard';
 import Reports from './Pages/Reports/Reports';
+import ParticipationReports from './Pages/ParticipationReports/ParticipationReports';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboardactivity" element={<DashboardActivity />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/participationreport" element={<ParticipationReports />} />
       </Routes>
     </BrowserRouter>
   );
